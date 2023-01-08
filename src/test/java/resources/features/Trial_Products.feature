@@ -1,6 +1,6 @@
 Feature: Client has a question or need support,so
   she/he needs to contact us with one of the options we have
-@ui
+@smoke
   Scenario: Client clicks on contact us page and choose and
     clicks on Medidata Care patient Support
 
