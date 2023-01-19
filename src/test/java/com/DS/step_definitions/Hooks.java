@@ -8,12 +8,12 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    @After("@ui")
+    @After("@uji")
     public void tearDown(Scenario scenario) {
-        // only takes a screenshot if the scenario fails
+
         if (scenario.isFailed()) {
-            // taking a screenshot
-            final byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+
+            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshot");
         }
         Driver.closeDriver();
